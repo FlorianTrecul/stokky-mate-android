@@ -1,15 +1,105 @@
+# ========================================
+# Android Studio / IntelliJ IDEA
+# ========================================
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.idea/
+.idea/**/*
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/vcs.xml
+.idea/**/gradle.xml
+.idea/**/modules.xml
+.idea/**/misc.xml
+.idea/**/deploymentTargetDropDown.xml
+.idea/**/render.experimental.xml
+.idea/**/assetWizardSettings.xml
+.idea/**/codeStyles/
+.idea/**/libraries/
+
+# Gradle Cache
+.gradle/
+**/build/
+**/out/
+
+# Local configuration
 local.properties
+*.sw? # Vim swap files
+*~ # Backup files
+.DS_Store
+
+# Generated files
+/captures/
+gen/
+bin/
+tmp/
+*.log
+
+# Testing
+*.apk
+*.ap_
+/app/build/
+captures/
+
+# ================================
+# Gradle
+# ================================
+*.jar
+*.war
+*.ear
+*.class
+*.dex
+*.so
+*.o
+*.obj
+*.aar
+*.zip
+*.lock
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+build/
+out/
+
+# ================================
+# Proguard
+# ================================
+proguard/
+
+# ================================
+# Miscellaneous
+# ================================
+/app/build/intermediates/
+*.keystore
+*.jks
+*.orig
+*.rej
+
+# Android Lint
+lint/reports/
+lint/annotations.zip
+
+# ================================
+# OS Specific Files
+# ================================
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*.pid
+*.seed
+
+# ================================
+# Logs & Temporary Files
+# ================================
+*.tmp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
