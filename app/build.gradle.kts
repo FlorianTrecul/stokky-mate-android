@@ -1,21 +1,21 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.floriantrecul.stokkymate"
-    compileSdk = 35
+    namespace = ProjectConfig.APPLICATION_ID
+    compileSdk = ProjectConfig.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "com.floriantrecul.stokkymate"
-        minSdk = 28
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = ProjectConfig.APPLICATION_ID
+        minSdk = ProjectConfig.MIN_SDK
+        targetSdk = ProjectConfig.TARGET_SDK
+        versionCode = ProjectConfig.VERSION_CODE
+        versionName = ProjectConfig.VERSION_NAME
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = ProjectConfig.TEST_INSTRUMENTATION_RUNNER
     }
 
     buildTypes {
