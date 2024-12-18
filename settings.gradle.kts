@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "StokkyMate"
 include(":app")
- 
+include(":core")
+include(":feature")
