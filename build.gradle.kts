@@ -12,6 +12,7 @@ buildscript {
 
 plugins {
     id(libs.plugins.detekt.get().pluginId) version libs.versions.detekt
+    id(libs.plugins.ktlint.get().pluginId) version libs.versions.ktlint
 }
 
 subprojects {

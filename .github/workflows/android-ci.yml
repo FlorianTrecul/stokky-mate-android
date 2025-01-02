@@ -49,27 +49,38 @@ jobs:
       - name: Run Detekt
         run: ./gradlew detektAllModules
 
-      # 7. Run Compose Lint Checks
+      # 7. Run KtLint Checks
+      - name: Run KtLint Checks
+        run: ./gradlew ktlintCheck
+
+      # 8. Run Compose Lint Checks
       - name: Run Compose Lint Checks
         run: ./gradlew lint
 
-      # 8. Build the project
+      # 9. Build the project
       - name: Build the Project
         run: ./gradlew assembleDebug
 
-      # 9. Run Unit Tests
+      # 10. Run Unit Tests
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      # 10. Upload Detekt Reports
+      # 11. Upload Detekt Reports
       - name: Upload Detekt Reports
         uses: actions/upload-artifact@v3
         with:
           name: Detekt Reports
           path: build/reports/detekt/detekt.html
 
-      # 11. Upload Lint Reports
-      - name: Upload Lint Reports
+      # 12. Upload KtLint Reports
+      - name: Upload KtLint Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: KtLint Reports
+          path: build/reports/ktlint/ktlint.html
+
+      # 13. Upload Compose Lint Checks Reports
+      - name: Upload Compose Lint Checks Reports
         uses: actions/upload-artifact@v3
         with:
           name: Lint Reports
