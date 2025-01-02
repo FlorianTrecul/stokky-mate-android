@@ -14,6 +14,26 @@ plugins {
     id(libs.plugins.detekt.get().pluginId) version libs.versions.detekt
 }
 
+subprojects {
+    afterEvaluate {
+        val lintChecks = "lintChecks"
+        val composeLintChecks = "compose.lint.checks"
+
+        plugins.withId(libs.plugins.android.library.get().pluginId) {
+            dependencies {
+                val libs = project.extensions.getByType<VersionCatalogsExtension>().named("libs")
+                add(lintChecks, libs.findLibrary(composeLintChecks).get())
+            }
+        }
+        plugins.withId(libs.plugins.android.application.get().pluginId) {
+            dependencies {
+                val libs = project.extensions.getByType<VersionCatalogsExtension>().named("libs")
+                add(lintChecks, libs.findLibrary(composeLintChecks).get())
+            }
+        }
+    }
+}
+
 val projectStructure = file(projectDir)
 val configFile = files("$rootProject/../config/detekt/detekt.yml")
 val kotlinFiles = "**/*.kt"
