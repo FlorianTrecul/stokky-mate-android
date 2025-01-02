@@ -45,17 +45,28 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      # 6. Build the project
+      # 6. Run Detekt Analysis
+      - name: Run Detekt
+        run: ./gradlew detektAllModules
+
+      # 7. Build the project
       - name: Build the Project
         run: ./gradlew assembleDebug
 
-      # 7. Run Unit Tests
+      # 8. Run Unit Tests
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      # 8. Upload Test Reports
+      # 9. Upload Test Reports
       - name: Upload Unit Test Reports
         uses: actions/upload-artifact@v3
         with:
           name: Unit Test Reports
           path: app/build/reports/tests/testDebugUnitTest/
+
+      # 10. Upload Detekt Report
+      - name: Upload Detekt Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Detekt Report
+          path: build/reports/detekt/detekt-report.html
