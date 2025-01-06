@@ -12,10 +12,8 @@ class MainGradlePlugin : Plugin<Project> {
 
     private fun applyPlugins(project: Project) {
         project.apply {
-            plugin(Plugins.ANDROID_APPLICATION)
             plugin(Plugins.ANDROID_LIBRARY)
             plugin(Plugins.KOTLIN_ANDROID)
-            plugin(Plugins.KOTLIN_COMPOSE)
         }
     }
 
@@ -33,7 +31,10 @@ class MainGradlePlugin : Plugin<Project> {
                 targetCompatibility = JavaVersion.VERSION_17
             }
 
-            buildFeatures {}
+            buildFeatures {
+                buildConfig = true
+                compose = true
+            }
         }
     }
 

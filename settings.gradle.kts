@@ -20,6 +20,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "StokkyMate"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":core")
+include(":core:logging")
 include(":feature")
