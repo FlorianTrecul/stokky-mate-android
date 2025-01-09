@@ -53,8 +53,8 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.ui.text.google.fonts)
-    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.ui.text.google.fonts)
+    implementation(libs.androidx.compose.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,5 +67,6 @@ dependencies {
     implementation(libs.androidx.compose.runtime)
 
     // Modules
+    implementation(projects.core.design)
     implementation(projects.core.logging)
 }
