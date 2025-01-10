@@ -1,4 +1,4 @@
-package com.floriantrecul.stokkymate.ui.theme
+package com.floriantrecul.core.design.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

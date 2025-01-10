@@ -1,4 +1,4 @@
-package com.floriantrecul.stokkymate.ui.theme
+package com.floriantrecul.core.design.theme
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
