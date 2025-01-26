@@ -24,9 +24,16 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common" />
             <option value="$PROJECT_DIR$/core/design" />
             <option value="$PROJECT_DIR$/core/logging" />
+            <option value="$PROJECT_DIR$/core/navigation" />
+            <option value="$PROJECT_DIR$/core/navigation/api" />
+            <option value="$PROJECT_DIR$/core/navigation/api-impl" />
             <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/home" />
+            <option value="$PROJECT_DIR$/feature/home/navigation" />
+            <option value="$PROJECT_DIR$/feature/home/presentation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
