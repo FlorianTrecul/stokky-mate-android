@@ -5,8 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
-import com.floriantrecul.core.design.theme.StokkyMateTheme
-import com.floriantrecul.core.navigation.api.NavControllerAccessor
+import com.floriantrecul.stokkymate.core.design.theme.StokkyMateTheme
+import com.floriantrecul.stokkymate.core.navigation.api.NavControllerAccessor
 import com.floriantrecul.stokkymate.navigation.StokkyMateNavigator
 import org.koin.android.ext.android.get
 
