@@ -1,4 +1,7 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
+    includeBuild("buildLogic")
     repositories {
         google {
             content {

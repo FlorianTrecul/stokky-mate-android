@@ -1,18 +1,11 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath(libs.gradle)
-        classpath(libs.kotlin.gradle.plugin)
-    }
-}
-
 plugins {
     id(libs.plugins.detekt.get().pluginId) version libs.versions.detekt
     id(libs.plugins.ktlint.get().pluginId) version libs.versions.ktlint
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.ksp) apply false
 }
 
 subprojects {

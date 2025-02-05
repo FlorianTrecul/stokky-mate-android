@@ -1,3 +1,5 @@
+package com.floriantrecul.stokkymate.buildlogic
+
 object ProjectConfig {
     const val APPLICATION_ID = "com.floriantrecul.stokkymate"
     const val MIN_SDK = 28
