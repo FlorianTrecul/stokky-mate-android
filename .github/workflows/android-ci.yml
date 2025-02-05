@@ -51,21 +51,21 @@ jobs:
 
       # 7. Upload Detekt Reports
       - name: Upload Detekt Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Detekt Reports
           path: build/reports/detekt/detekt.html
 
       # 8. Upload KtLint Reports
       - name: Upload KtLint Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: KtLint Reports
           path: build/reports/ktlint/ktlint.html
 
       # 9. Upload Compose Lint Reports
       - name: Upload Compose Lint Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Lint Reports
           path: app/build/reports/lint-results.html
@@ -118,7 +118,7 @@ jobs:
 
       # 8. Upload Unit Test Reports
       - name: Upload Unit Test Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Unit Test Reports
           path: app/build/reports/tests/testDebugUnitTest/
